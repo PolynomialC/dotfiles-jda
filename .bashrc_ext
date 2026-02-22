@@ -1,0 +1,24 @@
+# --- 2026 DEVELOPER ENVIRONMENT ---
+
+# Path & Environment
+export PATH="$HOME/.local/bin:/usr/local/bin:$PATH"
+export EDITOR='emacs -nw'
+
+# Fast Navigation
+eval "$(zoxide init bash)"
+
+# AI clis
+alias c='claude'
+alias cx='codex'
+alias ai='aider --auto-test --watch-files'
+
+# Tools
+alias em='emacs -nw'
+alias g='gh'
+alias gs='gh status'
+
+# Git Worktree
+# Usage: gwt <branch>
+gwt() {
+  git worktree add "../$1" "$1"
+}
